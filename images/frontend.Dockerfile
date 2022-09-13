@@ -1,7 +1,7 @@
 ARG FRAPPE_VERSION
 ARG ERPNEXT_VERSION
 
-FROM frappe/bench:latest as assets
+FROM naderelabed/bench:latest as assets
 
 ARG FRAPPE_VERSION
 RUN bench init --version=${FRAPPE_VERSION} --skip-redis-config-generation --verbose --skip-assets /home/frappe/frappe-bench
@@ -18,7 +18,7 @@ RUN bench setup requirements
 
 RUN bench build --production --verbose --hard-link
 
-FROM frappe/frappe-nginx:${FRAPPE_VERSION}
+FROM naderelabed/frappe-nginx:${FRAPPE_VERSION}
 
 USER root
 
