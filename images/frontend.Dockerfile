@@ -4,7 +4,7 @@ ARG ERPNEXT_VERSION
 FROM naderelabed/bench:latest as assets
 
 ARG FRAPPE_VERSION
-RUN bench init --version=${FRAPPE_VERSION} --skip-redis-config-generation --verbose --skip-assets /home/frappe/frappe-bench
+RUN bench init --frappe-path "https://github.com/naderelabed/frappe.git" --version=${FRAPPE_VERSION} --skip-redis-config-generation --verbose --skip-assets /home/frappe/frappe-bench
 
 WORKDIR /home/frappe/frappe-bench
 
