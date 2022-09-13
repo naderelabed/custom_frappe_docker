@@ -10,7 +10,7 @@ WORKDIR /home/frappe/frappe-bench
 
 # Comment following if ERPNext not required
 ARG ERPNEXT_VERSION
-RUN bench get-app https://github.com/naderelabed/erpnext.git --branch=${ERPNEXT_VERSION} --skip-assets --resolve-deps erpnext
+RUN bench get-app https://github.com/naderelabed/erpnext.git --branch=version-14 --skip-assets --resolve-deps erpnext
 
 COPY --chown=frappe:frappe repos apps
 
