@@ -18,11 +18,11 @@ RUN bench setup requirements
 
 RUN bench build --verbose --hard-link
 
+RUN bench setup production
+
 FROM naderelabed/frappe-nginx:${FRAPPE_VERSION}
 
 USER root
-
-RUN bench setup production
 
 RUN rm -fr /usr/share/nginx/html/assets
 
