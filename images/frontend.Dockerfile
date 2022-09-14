@@ -14,15 +14,13 @@ RUN bench get-app --branch=${ERPNEXT_VERSION} --skip-assets --resolve-deps https
 
 COPY --chown=frappe:frappe repos apps
 
-RUN bench setup requirements
+RUN bench setup production requirements
 
 RUN bench build --verbose --hard-link
 
-USER root
-
-RUN bench setup production
-
 FROM naderelabed/frappe-nginx:${FRAPPE_VERSION}
+
+USER root
 
 RUN rm -fr /usr/share/nginx/html/assets
 
