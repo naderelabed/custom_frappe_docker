@@ -14,7 +14,7 @@ RUN bench get-app https://github.com/naderelabed/erpnext.git --branch=version-13
 
 COPY --chown=frappe:frappe repos apps
 
-RUN bench setup requirements
+#RUN bench setup requirements
 
 RUN bench build --production --verbose --hard-link
 
