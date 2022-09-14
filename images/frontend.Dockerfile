@@ -14,7 +14,9 @@ RUN bench get-app --branch=${ERPNEXT_VERSION} --skip-assets --resolve-deps https
 
 COPY --chown=frappe:frappe repos apps
 
-RUN bench setup requirements production
+RUN bench setup requirements
+
+RUN bench setup production
 
 RUN bench build --verbose --hard-link
 
