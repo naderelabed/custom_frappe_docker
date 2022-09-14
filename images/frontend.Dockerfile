@@ -16,13 +16,13 @@ COPY --chown=frappe:frappe repos apps
 
 RUN bench setup requirements
 
-RUN bench setup production
-
 RUN bench build --verbose --hard-link
 
 FROM naderelabed/frappe-nginx:${FRAPPE_VERSION}
 
 USER root
+
+RUN bench setup production
 
 RUN rm -fr /usr/share/nginx/html/assets
 
