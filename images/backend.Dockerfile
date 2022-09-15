@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1.3
+#syntax=docker/dockerfile:1.3
 
 ARG ERPNEXT_VERSION
 FROM naderelabed/erpnext-worker:${ERPNEXT_VERSION}
