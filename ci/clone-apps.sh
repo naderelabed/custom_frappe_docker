@@ -20,3 +20,5 @@
 
 git clone --depth 1 --branch master https://github.com/naderelabed/POS-Awesome repos/posawesome
 git clone --depth 1 --branch version-13 https://github.com/naderelabed/wiki repos/wiki
+git clone --depth 1 --branch master https://github.com/naderelabed/frappe_helper repos/frappehelper
+git clone --depth 1 --branch master https://github.com/naderelabed/erpnext-restaurant repos/erpnextrestaurant
