@@ -18,8 +18,7 @@
 
 # Following are public repositories.
 
-git clone --depth 1 --branch master https://github.com/naderelabed/erpnext-restaurant repos/restaurant_management
 git clone --depth 1 --branch master https://github.com/naderelabed/frappe_helper repos/frappe_helper
 git clone --depth 1 --branch master https://github.com/naderelabed/POS-Awesome repos/posawesome
 git clone --depth 1 --branch version-13 https://github.com/naderelabed/wiki repos/wiki
-
+# git clone --depth 1 --branch master https://github.com/naderelabed/erpnext-restaurant repos/restaurant_management
